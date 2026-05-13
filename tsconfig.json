@@ -26,7 +26,9 @@
       "@mini-types/alipay",
       "@douyin-microapp/typings",
       "ks-miniprogram-types/global",
-      "@types/baidu-app"
+      "@types/baidu-app",
+      // 配置z-paging/types类型定义文件
+      "z-paging/types"
     ],
     "strict": true,
     "noImplicitThis": true,
