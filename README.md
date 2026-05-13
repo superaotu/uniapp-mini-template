@@ -1,124 +1,197 @@
-<p align='center'>
-拥抱 web 开发，拯救 uniapp。
-<br>
-基于Uniapp、Vue 3、pinia(且持久化保存)、Typescript、UnoCSS等主流技术开发的开箱即用模版，适配所有(app、mp、web)平台！！！
+# uniapp-mini-template
+
+基于 UniApp、Vue 3、TypeScript 的开箱即用小程序开发模板。
+
+<p align="center">
+  <a href="https://uniapp.dcloud.net.cn/">UniApp</a> |
+  <a href="https://vuejs.org/">Vue 3</a> |
+  <a href="https://www.typescriptlang.org/">TypeScript</a> |
+  <a href="https://pinia.vuejs.org/">Pinia</a> |
+  <a href="https://unocss.dev/">UnoCSS</a>
 </p>
 
-<br>
+## 平台支持
 
-<p align='center'>
-<a href="https://uni-save.netlify.app">🖥 在线预览</a>
-<a href="https://unisave-docs.netlify.app/">📖 阅读文档</a>
-</p>
-
-## 衍生项目
-由于这个模板的业务场景非常的局限，下面提供了一个精心策划的列表。当然也欢迎你 PR 提供自己的项目！
-
-###### 官方
-
-- [unisave-lite](https://github.com/sunpm/unisave-lite) - unisave 的 js 版本
-
-## 平台兼容性
-在技术考量上，优先同时支持下列的平台，为兼容多个平台而舍弃一些实用的依赖插件。如发现下列平台环境开发编译出现问题，欢迎提 [issue](https://github.com/sunpm/unisave/issues/new) or [pr](https://github.com/sunpm/unisave/pulls)
-
-| H5 | IOS  | 安卓 | 微信小程序 | 字节小程序 | 快手小程序 | 支付宝小程序 | 百度小程序 |
-|:--:| :--: | :--: | :--------: | :--------: | :--------: | :----------: | :----------: |
-| √  |  √   |  √   |     √      |     √      |     √      |      √       |      √       |
+| H5 | iOS | Android | 微信小程序 | 支付宝小程序 | 字节小程序 | 快手小程序 | 百度小程序 |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| √ | √ | √ | √ | √ | √ | √ | √ |
 
 ## 特性
-- 🗂 [基于文件的路由](./src/pages)
 
-- 📦 [组件自动化加载](./src/components)
+- 🏎️ **Vue 3 + Composition API** - 基于 `<script setup>` 语法，现代化开发体验
+- 📦 **组件自动导入** - 告别繁琐的 import 语句
+- 🔌 **API 自动导入** - 直接使用 Composition API 函数
+- 🍍 **状态管理** - Pinia 搭配持久化插件，数据持久化无忧
+- 🎨 **UnoCSS** - 原子化 CSS，快速构建精美界面
+- 🧩 **Wot Design Uni** - 精心设计的跨端 UI 组件库
+- 🔀 **路由封装** - 封装常用路由操作，开箱即用
+- 🌐 **请求封装** - 基于 Promise 的 HTTP 客户端，拦截器统一处理
+- 📱 **分包加载** - 支持小程序分包，优化首屏加载速度
+- 📝 **TypeScript** - 完整的类型支持，类型安全
+- 🎯 ** ESLint + Prettier** - 统一代码风格
 
-- 🍍 [使用 Pinia 的状态管理](https://github.com/vuejs/pinia)
+## 技术栈
 
-- 📑 [布局系统](./src/layouts)
+### 核心框架
+- [UniApp](https://uniapp.dcloud.net.cn/) - 跨平台应用开发框架
+- [Vue 3](https://vuejs.org/) - 渐进式 JavaScript 框架
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript 超集
 
-- 🔥 使用 [新的 `<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
+### 状态管理
+- [Pinia](https://pinia.vuejs.org/) - Vue 状态管理
+- [pinia-plugin-persist-uni](https://github.com/Allen-1998/pinia-plugin-persist-uni) - Pinia 数据持久化
 
-- 📥 [API 自动加载](https://github.com/unplugin/unplugin-auto-import) - 直接使用 Composition API 无需引入
+### UI 组件
+- [Wot Design Uni](https://wot-design-uni.guangzhouyundiwangluokejiyouxiangongsi.github.io/) - 跨端 UI 组件库
 
-- 🎨 [UnoCSS](https://github.com/unocss/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
+### 样式方案
+- [UnoCSS](https://unocss.dev/) - 原子化 CSS 引擎
+- [@wot-ui/unocss-preset](https://github.com/MJYP-dev/wot-ui-unocss-preset) - Wot Design UnoCSS 预设
 
-- 🦾 TypeScript, 为什么不呢
+### 开发工具
+- [Vite](https://vitejs.dev/) - 下一代前端构建工具
+- [Vitest](https://vitest.dev/) - Vite 原生单元测试框架
 
-- ⚙️ 使用 [Vitest](https://github.com/vitest-dev/vitest) 进行单元测试
+### 插件生态
+- [@uni-helper/vite-plugin-uni-pages](https://github.com/uni-helper/vite-plugin-uni-pages) - 文件路由系统
+- [@uni-helper/vite-plugin-uni-manifest](https://github.com/uni-helper/vite-plugin-uni-manifest) - TypeScript 编写 manifest.json
+- [@uni-helper/vite-plugin-uni-layouts](https://github.com/uni-helper/vite-plugin-uni-layouts) - 页面布局系统
+- [@uni-helper/uni-network](https://github.com/uni-helper/uni-network) - HTTP 请求客户端
+- [@uni-helper/uni-use](https://github.com/uni-helper/uni-use) - 路由操作封装
 
-## 预配置
 
-### UI 框架
-- [uview-plus](https://github.com/ijry/uview-plus) uview-plus3.0是基于uView2.x修改的vue3版本
-- [UnoCSS](https://github.com/unocss/unocss) 高性能且极具灵活性的即时原子化 CSS 引擎
-- [unocss-preset-uni](https://github.com/uni-helper/unocss-preset-uni) 专为 uni-app 打造的 UnoCSS 预设
+## 项目结构
 
-### 插件
-- [Pinia](https://github.com/vuejs/pinia) - 直接的, 类型安全的, 使用 Composition API 的轻便灵活的 Vue 状态管理
-  - [`pinia-plugin-persist-uni`](https://github.com/Allen-1998/pinia-plugin-persist-uni) - pinia 在 uniapp 中数据持久化插件
-- Router
-  - [`@uni-helper/vite-plugin-uni-pages`](https://github.com/uni-helper/vite-plugin-uni-pages) - 在 Vite 驱动的 uni-app 上使用基于文件的路由系统
-  - [`vite-plugin-vue-layouts`](https://github.com/uni-helper/vite-plugin-uni-layouts) - 页面布局系统
-  - [`@uni-helper/uni-use`](https://github.com/uni-helper/uni-use) - 使用 `useRouter` 封装路由方法 -> `src/composables/useNavigation.ts`
-- 请求
-  - [`@uni-helper/uni-network`](https://github.com/uni-helper/uni-network) - 为 uni-app 打造的基于 Promise 的 HTTP 客户端
-  - `services` 目录封装通用请求
-- [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - 自动加载组件
-- [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - 直接使用 Composition API 等，无需导入
-- [`@uni-helper/vite-plugin-uni-manifest`](https://github.com/uni-helper/vite-plugin-uni-manifest) - 使用 TypeScript 编写 `uni-app` 的 `manifest.json`。
+```
+src/
+├── components/          # 全局组件目录
+├── composables/          # 组合式函数
+├── constants/            # 常量定义
+├── layouts/              # 布局组件
+│   └── tabbar.vue        # Tabbar 布局
+├── pages/                # 页面目录（自动生成路由）
+│   ├── index/
+│   └── test/
+├── pages-sub/            # 分包页面目录
+├── router/               # 路由配置
+├── services/             # 服务层
+│   ├── apis/             # API 接口定义
+│   └── request/           # 请求封装
+├── static/               # 静态资源
+├── stores/               # Pinia 状态管理
+│   └── modules/          # Store 模块
+├── typings/              # 类型定义
+├── utils/                # 工具函数
+├── App.vue               # 应用入口
+├── main.ts               # 主入口文件
+├── manifest.json         # 应用配置（自动生成）
+└── pages.json            # 页面配置（自动生成）
+```
 
-### 编码风格
+## 快速开始
 
-- 使用 Composition API 地 [`<script setup>` SFC 语法](https://cn.vuejs.org/api/sfc-script-setup.html)
-- [ESLint](https://github.com/eslint/eslint) 配置为 [@antfu/eslint-config](https://github.com/antfu/eslint-config) - 单引号, 无分号...
-  - [@unocss/eslint-config](https://unocss.dev/integrations/eslint) - 用于UnoCSS的ESLint配置
-  - [@uni-helper/eslint-config](https://github.com/uni-helper/eslint-config) - 适用于 uni-app 的 Anthony's ESLint 配置预设
+### 环境要求
 
-### 各平台类型定义文件
-- [x] [uni-app 组件](https://www.npmjs.com/package/@uni-helper/uni-app-types)
-- [x] [微信小程序](https://www.npmjs.com/package/miniprogram-api-typings)
-- [x] [支付宝小程序](https://www.npmjs.com/package/@mini-types/alipay)
-- [x] [字节小程序](https://www.npmjs.com/package/@douyin-microapp/typings)
-- [x] [快手小程序](https://www.npmjs.com/package/ks-miniprogram-types/global)
-- [x] [百度小程序](https://www.npmjs.com/package/@types/baidu-app)
+- Node.js >= 18
+- pnpm >= 8
 
-## 环境建议
+### 安装依赖
 
-**Node >= 18**
-
-**pnpm >= 8**
-
-## 使用该模版
 ```sh
-npx degit sunpm/unisave#main my-unisave
-cd my-unisave
 pnpm install
 ```
-如果你没装过 pnpm, 可以先运行: `npm install -g pnpm`
 
-## 清单
+### 开发命令
 
-使用此模板时，请尝试按照清单正确更新您自己的信息
+```sh
+# H5 开发
+pnpm dev:h5
 
-- [ ] 在 `LICENSE` 中改变作者名或删除
-- [ ] 在 `manifest.config.ts` 中修改项目名称，描述，`appid` 等
-- [ ] 在 `.env.*` 更改环境变量
-- [ ] 不需要部署到 netlify 请移除 `.netlify.toml` 文件
-- [ ] 整理 README 并删除演示页面和组件
+# 微信小程序
+pnpm dev:mp-weixin
 
-紧接着, 享受吧 :)
+# 支付宝小程序
+pnpm dev:mp-alipay
 
-## 问题
+# App（Android）
+pnpm dev:app-android
 
-怎么修改了 `pages.json` 没效果？
-> 模版使用了 [`@uni-helper/vite-plugin-uni-pages`](https://github.com/uni-helper/vite-plugin-uni-pages)插件依赖，需要在`pages.config.ts`配置，编译会生成至`pages.json`，详细[点我看文档](https://github.com/uni-helper/vite-plugin-uni-pages)
+# App（iOS）
+pnpm dev:app-ios
+```
 
-怎么修改了 `manifest.json` 没效果？
-> 模版使用了[`@uni-helper/vite-plugin-uni-manifest`](https://github.com/uni-helper/vite-plugin-uni-manifest)插件依赖，需要在`manifest.config.ts`配置，编译会生成至`manifest.json`，新增了自动生成项目配置信息的方法，详细[点击查看代码](./manifest.config.ts)
+### 构建命令
 
-报错：`Uncaught SyntaxError: The requested module '/node_modules/vue-demi/lib/index.mjs?v=701bef9f' does not provide an export named 'hasInjectionContext'`
-> pinia v2.1.X 版本要求 vue 3.3 或者 vue-demi latest ，如果 uniapp 的 vue 版本是 ^3.2.45，通过 pinia 降级到 2.0.X 可以运行和使用。
+```sh
+# 构建 H5
+pnpm build:h5
 
-## 感谢
+# 构建微信小程序
+pnpm build:mp-weixin
 
-- [vitesse](https://github.com/antfu/vitesse)
-- [uni-helper](https://github.com/uni-helper)
-- [uni-vitesse](https://github.com/Ares-Chang/uni-vitesse)
+# 构建 App
+pnpm build:app
+```
+
+## 常用配置
+
+### 页面配置
+
+在 `pages.config.ts` 中配置页面信息和全局样式：
+
+```ts
+export default defineUniPages({
+  pages: [],
+  globalStyle: {
+    navigationBarTextStyle: 'black',
+    navigationBarTitleText: '应用名称',
+  },
+})
+```
+
+### 应用配置
+
+在 `manifest.config.ts` 中配置应用信息：
+
+```ts
+export default defineManifestConfig({
+  'name': '应用名称',
+  'appid': '应用AppID',
+  'description': '应用描述',
+  'versionName': '1.0.0',
+  'versionCode': '100',
+})
+```
+
+### 环境变量
+
+创建 `.env.development` 和 `.env.production` 文件：
+
+```env
+VITE_BASE_API=/api
+VITE_HTTP_URL=https://api.example.com
+```
+
+## 代码规范
+
+### TypeScript 类型检查
+
+```sh
+pnpm type-check
+```
+
+### ESLint 检查
+
+```sh
+pnpm lint
+```
+
+### ESLint 自动修复
+
+```sh
+pnpm lint:fix
+```
+
+## License
+
+[MIT](./LICENSE)
