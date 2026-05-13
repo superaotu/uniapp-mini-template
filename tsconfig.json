@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "useDefineForClassFields": true,
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "@wot-ui/ui/global",
+      "@uni-helper/vite-plugin-uni-pages",
+      "@dcloudio/types",
+      "@uni-helper/uni-app-types",
+      "pinia-plugin-persist-uni",
+      "miniprogram-api-typings",
+      "@mini-types/alipay",
+      "@douyin-microapp/typings",
+      "ks-miniprogram-types/global",
+      "@types/baidu-app"
+    ],
+    "strict": true,
+    "noImplicitThis": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false,
+    "skipLibCheck": true
+  },
+  "vueCompilerOptions": {
+    "plugins": ["@uni-helper/uni-app-types/volar-plugin"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+
+    "./uni-pages.d.ts",
+    "./shims-uni.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "unpackage"
+  ]
+}
