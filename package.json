@@ -127,11 +127,12 @@
     "stylelint-config-standard-vue": "^1.0.0",
     "stylelint-scss": "^6.7.0",
     "typescript": "^6.0.3",
-    "unocss": "^0.58.3",
+    "unocss": "65.5.0",
+    "unocss-preset-weapp": "^66.0.2",
     "vite": "5.2.8",
     "vite-plugin-vue-devtools": "^7.4.4",
     "vitest": "^2.0.5",
-    "vue-tsc": "^1.0.24"
+    "vue-tsc": "^3.2.9"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

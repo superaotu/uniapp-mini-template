@@ -5,15 +5,15 @@ import uni from '@dcloudio/vite-plugin-uni'
 import UniLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import UniManifest from '@uni-helper/vite-plugin-uni-manifest'
 import UniPages from '@uni-helper/vite-plugin-uni-pages'
-import UnoCSS from 'unocss/vite'
 import { defineConfig, loadEnv } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { handlePageName, writePageConst } from './builder/write-page-const.js'
 
 // https://vitejs.dev/config/
-export default defineConfig((configEnv) => {
+export default defineConfig(async (configEnv) => {
   const viteEnv = loadEnv(configEnv.mode, process.cwd())
   const { VITE_BASE_API, VITE_HTTP_URL } = viteEnv
+  const UnoCss = await import('unocss/vite').then(i => i.default)
 
   return {
     resolve: {
@@ -42,7 +42,6 @@ export default defineConfig((configEnv) => {
        * @see https://github.com/antfu/unocss
        * see unocss.config.ts for config
        */
-      UnoCSS(),
       UniPages({
         // 忽略页面内组件目录
         exclude: ['**/components/**/*.*'],
@@ -81,6 +80,7 @@ export default defineConfig((configEnv) => {
             plugin.api.options.devToolsEnabled = false
         },
       },
+      UnoCss(),
     ],
     /**
      * Vitest
